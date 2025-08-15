@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    
+    <style>
+        body{
+            background-color: #b6d3d3;
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        header img{
+            width: 200px;
+            height: 160px;
+            border-radius: 50%;
+        }
+
+        form{
+            max-width: 600px;
+            margin: 30px auto;
+            margin-bottom: 0;
+            background-color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-container{
+            padding: 30px;
+        }
+
+        label{
+            font-weight: 400;
+            color: #2b3d3d;
+            font-size: 12px;
+            margin-bottom: 1px;
+            display: block;
+        }
+        input[type="text"]{
+            width: 96%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        input[type="text"]:focus{
+            border-color: #6ab7b5;
+            outline: none;
+        }
+        input[type="radio"]{
+            margin-top: 12px;
+            margin-bottom: 15px;
+        }
+        input[type="submit"]{
+            background-color: #6ab7b5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover{
+            background-color: #559c9a;
+        }
+
+        h1{
+            text-align: center;
+            color: #2b3d3d;
+            font-size: 26px;
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2{
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+
+        #location{
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+
+        .image-container{
+            position: relative;
+        }
+
+        .image-container img{
+            width: 100%;
+            display: block;
+        }
+
+        .image-container::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255,255,255, 0) 0%, white 100%);
+        }
+
+        .name-container{
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .name-container div{
+            flex: 1;
+        }
+
+        #shuttle-size{
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./images/logo.png" alt="logo">
+    </header>
+
+    <form>
+        <div class="image-container">
+        <img src="./images/pool.jpg" alt="banner" width="100%" height="200px">
+        </div>
+        <div class="form-container">
+            <h1>Hotel Guest Registration Form</h1>
+            <h2>Name</h2>
+
+            <div class="name-container">
+                <div>
+                    <input type="text" id="fname" name="name" placeholder="First Name" required>
+                    <label for="fname">First Name</label>
+                </div>
+                <div>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                    <label for="lname">Last Name</label>
+                </div>
+            </div>
+
+            <label id="location" for="pickup">Pick-up Location</label><br>
+            <input type="text" id="pickup" name="pickup" size="85" required style="height: 120px;"><br><br>
+
+            <label id="shuttle-size">Shuttle Service</label>
+            <div>
+                <label><input type="radio" name="Shuttle" value="yes">Yes</label>
+                <label><input type="radio" name="Shuttle" value="no">No</label>
+            </div>
+            
+            <label id="location" for="dropoff">Drop-off Location</label><br>
+            <input type="text" id="pickup" name="pickup" size="85" required style="height: 120px;"><br><br>
+
+            <input type="submit" value="Submit">
+        </div>
+
+
+        
+
+    </form>
+</body>
+</html>
